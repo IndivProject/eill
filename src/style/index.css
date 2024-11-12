@@ -1,10 +1,18 @@
 @font-face {
-  font-family: "pretendard";
+  font-family: "Regular";
+  src: url(../../public/Pretendard-Regular.woff);
+}
+@font-face {
+  font-family: "Medium";
   src: url(../../public/Pretendard-Medium.woff);
+}
+@font-face {
+  font-family: "Bold";
+  src: url(../../public/Pretendard-SemiBold.woff);
 }
 
 * {
-  font-family: "pretendard";
+  font-family: "Regular";
   margin: 0;
   padding: 0;
 }
