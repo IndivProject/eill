@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import Main from "./pages/Main";
+import Main from "./pages/Main";
 import "./style/index.css";
-// import { ThemeProvider } from "styled-components";
-// import { themeColor } from "./util/style/theme";
+import { ThemeProvider } from "styled-components";
+import { themeColor } from "./style/ThemeColor";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
