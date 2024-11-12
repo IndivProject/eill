@@ -1,7 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+export const DirectionAnime = keyframes`
+    0%{margin-bottom : 2rem;}
+    25%{margin-bottom : 2.5rem;}
+    50%{margin-bottom : 2rem;}
+    75%{margin-bottom : 2.5rem;}
+    0%{margin-bottom : 2rem;}
+`;
 
 export const MainContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -45,4 +53,17 @@ export const Line = styled.div`
   border-radius: 2rem;
   background-color: ${({ theme }) => theme.white10};
   margin: 2rem;
+`;
+
+export const Direction = styled.img`
+  width: 3rem;
+
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  margin-bottom: 2rem;
+
+  animation-duration: 3s;
+  animation-name: ${DirectionAnime};
+  animation-iteration-count: infinite;
 `;
