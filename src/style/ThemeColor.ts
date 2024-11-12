@@ -2,6 +2,7 @@ export const themeColor = {
   personal: "#3F4890",
   personal10: "#323B82",
   personal20: "#2D356E",
+  personal30: "#242960",
 
   white: "#ffffff",
   white10: "#ECF7FC",

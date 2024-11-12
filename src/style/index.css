@@ -13,6 +13,11 @@
 
 * {
   font-family: "Regular";
+  color: #2c292f;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: white;
 }
