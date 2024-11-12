@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "pretendard";
+  src: url(../../public/Pretendard-Medium.woff);
+}
+
+* {
+  font-family: "pretendard";
+  margin: 0;
+  padding: 0;
+}
