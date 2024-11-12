@@ -15,6 +15,7 @@ const Main = () => {
             <S.Title>eill</S.Title>
             <S.Line />
             <S.Introduce>Tokyo | singer-songwriter</S.Introduce>
+            <S.Introduce>1998. 06. 17.</S.Introduce>
           </S.ImgBlur>
           <S.Img src={MainImg} alt="mainimg" />
         </div>

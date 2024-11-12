@@ -45,6 +45,7 @@ export const Introduce = styled.p`
   font-size: 1rem;
   letter-spacing: 0.75rem;
   color: ${({ theme }) => theme.white10};
+  margin-bottom: 1rem;
 `;
 
 export const Line = styled.div`

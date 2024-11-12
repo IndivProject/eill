@@ -80,7 +80,7 @@ export const SuggestSong: ISuggestSong[] = [
     album: Album[3].title,
     date: Album[3].date,
     url: Album[3].url,
-    introduce: "새로운 곳을 갈때, 차분해지는 노래",
+    introduce: "여행갈 때, 차분해지는 노래",
     image: Album[3].image,
   },
   {
