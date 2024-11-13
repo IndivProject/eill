@@ -10,4 +10,5 @@ export interface ISingle {
   image: string;
   title: string;
   date: string;
+  url: string;
 }
