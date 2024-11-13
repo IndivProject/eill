@@ -1,29 +1,32 @@
 import React from "react";
 import { Album } from "../../constant/Album";
+import * as S from "./style";
 
 const AlbumList = () => {
+  const count: number = 3;
+
   return (
     <>
-      <p>Album</p>
+      <S.Title>Album</S.Title>
       <div>
         {new Array(
-          Album.length % 3 != 0
-            ? Math.floor(Album.length / 3 + 1)
-            : Math.floor(Album.length / 3)
+          Album.length % count != 0
+            ? Math.floor(Album.length / count + 1)
+            : Math.floor(Album.length / count)
         )
           .fill(0)
           .map((_, idx) => {
             return (
-              <p key={idx}>
-                {new Array(3).fill(0).map((_, idx1) => {
-                  if (Album[idx1 + 3 * idx] == null) return <></>;
-                  return <p>{Album[idx1 + 3 * idx].title}</p>;
+              <S.SongWrap key={idx}>
+                {new Array(count).fill(0).map((_, idx1) => {
+                  if (Album[idx1 + count * idx] == null) return <></>;
+                  return <p>{Album[idx1 + count * idx].title}</p>;
                 })}
-              </p>
+              </S.SongWrap>
             );
           })}
       </div>
-      <p>Single</p>
+      <S.Title>Single</S.Title>
     </>
   );
 };
