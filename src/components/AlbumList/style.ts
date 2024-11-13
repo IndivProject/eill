@@ -10,4 +10,5 @@ export const Title = styled.p`
 export const SongWrap = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 4rem;
 `;
