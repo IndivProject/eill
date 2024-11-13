@@ -55,6 +55,7 @@ export const Context = styled.p<{ isHover?: boolean }>`
   ${({ theme }) => theme.personal10};
 
   &:nth-child(1) {
+    cursor: pointer;
     ${({ isHover }) => isHover && `text-decoration: underline;`}
     font-family: "Medium";
     font-size: 1.5rem;
