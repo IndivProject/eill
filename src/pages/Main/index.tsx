@@ -5,6 +5,7 @@ import DirectionImg from "../../asset/Direction.png";
 import TodaySong from "../../components/TodaySong";
 import { SuggestSong } from "../../constant/Suggest";
 import { TodaySuggest } from "../../util/todaySuggest";
+import AlbumList from "../../components/AlbumList";
 
 const Main = () => {
   return (
@@ -23,6 +24,8 @@ const Main = () => {
       </S.MainContainer>
 
       <TodaySong songInfo={SuggestSong[TodaySuggest()]} />
+
+      <AlbumList />
     </>
   );
 };
