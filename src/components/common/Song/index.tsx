@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import * as S from "./style";
+import { useNavigate } from "react-router-dom";
 
 interface IAlbum {
   image: string;
   title: string;
   date: string;
+  idx: number;
   inviteSong: string;
   inviteSong2?: string;
   isAlbum?: boolean;
@@ -14,11 +16,15 @@ const Song = ({
   image,
   title,
   date,
+  idx,
   inviteSong,
   inviteSong2,
   isAlbum,
 }: IAlbum) => {
   const [isHover, setIsHover] = useState<boolean>(false);
+  const navigate = useNavigate();
+
+  const MoveDetailPage = () => navigate(`/detail/${isAlbum ? 1 : 0}/${idx}`);
 
   return (
     <S.MainWrap
@@ -28,13 +34,17 @@ const Song = ({
       <S.ImageWrap>
         {
           <S.ImageFilter isHover={isHover}>
-            <S.DetailContext>자세히 보기</S.DetailContext>
+            <S.DetailContext onClick={MoveDetailPage}>
+              자세히 보기
+            </S.DetailContext>
           </S.ImageFilter>
         }
         <S.Image src={image} alt="image" />
       </S.ImageWrap>
       <S.ContextWrap>
-        <S.Context isHover={isHover}>{title}</S.Context>
+        <S.Context isHover={isHover} onClick={MoveDetailPage}>
+          {title}
+        </S.Context>
         <S.Context>{date}</S.Context>
         <S.Context>
           {inviteSong}

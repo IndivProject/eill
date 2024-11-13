@@ -29,6 +29,7 @@ const AlbumList = () => {
                         image={Album[idx1 + count * idx].image}
                         title={Album[idx1 + count * idx].title}
                         date={Album[idx1 + count * idx].date}
+                        idx={idx1 + count * idx}
                         inviteSong={Album[idx1 + count * idx].songs[0]}
                         inviteSong2={Album[idx1 + count * idx].songs[1]}
                         isAlbum
@@ -60,6 +61,7 @@ const AlbumList = () => {
                         image={Single[idx1 + count * idx].image}
                         title={Single[idx1 + count * idx].title}
                         date={Single[idx1 + count * idx].date}
+                        idx={idx1 + count * idx}
                         inviteSong={Single[idx1 + count * idx].title}
                       />
                     );
