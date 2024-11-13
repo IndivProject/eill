@@ -4,6 +4,7 @@ import Palette from "../asset/Songs/Album/Palette.webp";
 import Makuake from "../asset/Songs/Album/Makuake.webp";
 import Loveliekhate from "../asset/Songs/Album/Loveliekhate.webp";
 import MyDreamBox from "../asset/Songs/Album/MyDreamBox.webp";
+import Finale from "../asset/Songs/Album/finale.webp";
 
 export const Album: IAlbum[] = [
   {
@@ -28,11 +29,12 @@ export const Album: IAlbum[] = [
       "dream box",
     ],
   },
+
   {
     image: Palette,
     url: "https://www.youtube.com/playlist?list=OLAK5uy_k8A3ZrlYmlrgrd7GVUNYMbLPleO9EvLbk",
     title: "Palette",
-    date: "2019. 11. 06.",
+    date: "2022. 02. 02.",
     songs: [
       "いけない baby",
       "ここで息をして",
@@ -49,10 +51,23 @@ export const Album: IAlbum[] = [
     ],
   },
   {
+    image: Finale,
+    url: "https://www.youtube.com/playlist?list=OLAK5uy_lXbQqiCiFcpKG_Da6FxxhCDqR47TrvrSo",
+    title: "プレロマンス/フィナーレ。",
+    date: "2022. 09. 07.",
+    songs: [
+      "プレロマンス",
+      "フィナーレ。",
+      "片っぽ (Acoustic Version)",
+      "プレロマンス (Instrumental)",
+      "フィナーレ。 (Instrumental)",
+    ],
+  },
+  {
     image: Loveliekhate,
     url: "https://www.youtube.com/playlist?list=OLAK5uy_nnzv5Tz01UJTeX50AKhdd-VVLajharqSc",
     title: "LOVE/LIKE/HATE",
-    date: "2019. 11. 06.",
+    date: "2020. 11. 04.",
     songs: [
       "踊らせないで",
       "片っぽ",
@@ -69,7 +84,7 @@ export const Album: IAlbum[] = [
     image: SpotLight,
     url: "https://www.youtube.com/watch?v=lNtaDHj5q8Q&list=OLAK5uy_mZ_rigFl8hAD250aZfcbHbjLdb_jHc2_w",
     title: "SPOTLIGHT",
-    date: "2019. 11. 06.",
+    date: "2018. 10. 03.",
     songs: [
       "SPOTLIGHT",
       "この夜が明けるまで",
