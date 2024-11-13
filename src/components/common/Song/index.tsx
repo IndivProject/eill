@@ -21,11 +21,11 @@ const Song = ({
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
-    <S.MainWrap>
-      <S.ImageWrap
-        onMouseOver={() => setIsHover(true)}
-        onMouseOut={() => setIsHover(false)}
-      >
+    <S.MainWrap
+      onMouseOver={() => setIsHover(true)}
+      onMouseOut={() => setIsHover(false)}
+    >
+      <S.ImageWrap>
         {
           <S.ImageFilter isHover={isHover}>
             <S.DetailContext>자세히 보기</S.DetailContext>
@@ -34,7 +34,7 @@ const Song = ({
         <S.Image src={image} alt="image" />
       </S.ImageWrap>
       <S.ContextWrap>
-        <S.Context>{title}</S.Context>
+        <S.Context isHover={isHover}>{title}</S.Context>
         <S.Context>{date}</S.Context>
         <S.Context>
           {inviteSong}

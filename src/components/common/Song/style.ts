@@ -49,12 +49,13 @@ export const ContextWrap = styled.div`
   width: 50%;
 `;
 
-export const Context = styled.p`
+export const Context = styled.p<{ isHover?: boolean }>`
   font-size: 1rem;
   margin-bottom: 0.25rem;
   ${({ theme }) => theme.personal10};
 
   &:nth-child(1) {
+    ${({ isHover }) => isHover && `text-decoration: underline;`}
     font-family: "Medium";
     font-size: 1.5rem;
   }

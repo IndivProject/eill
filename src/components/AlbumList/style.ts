@@ -22,11 +22,7 @@ export const SongWrap = styled.div`
 `;
 
 export const SongContainer = styled.div`
-  margin: 10rem auto;
+  margin: 20rem auto;
 
   width: 80%;
-
-  &:nth-child(3) {
-    margin-top: 20rem;
-  }
 `;
