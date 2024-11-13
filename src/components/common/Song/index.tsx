@@ -6,10 +6,18 @@ interface IAlbum {
   title: string;
   date: string;
   inviteSong: string;
+  inviteSong2?: string;
   isAlbum?: boolean;
 }
 
-const Song = ({ image, title, date, inviteSong, isAlbum }: IAlbum) => {
+const Song = ({
+  image,
+  title,
+  date,
+  inviteSong,
+  inviteSong2,
+  isAlbum,
+}: IAlbum) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
@@ -30,7 +38,12 @@ const Song = ({ image, title, date, inviteSong, isAlbum }: IAlbum) => {
         <S.Context>{date}</S.Context>
         <S.Context>
           {inviteSong}
-          {isAlbum && "..."}
+          {isAlbum && (
+            <>
+              ,<br />
+              {inviteSong2} ...
+            </>
+          )}
         </S.Context>
       </S.ContextWrap>
     </S.MainWrap>

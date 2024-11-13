@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const MainWrap = styled.div`
   margin-right: 2rem;
   display: flex;
-  width: 500px;
+  justify-content: space-between;
+  width: 30%;
+  border-radius: 0.5rem;
 `;
 
 export const ImageWrap = styled.div`
@@ -44,7 +46,7 @@ export const DetailContext = styled.p`
 `;
 
 export const ContextWrap = styled.div`
-  margin-left: 2rem;
+  width: 50%;
 `;
 
 export const Context = styled.p`
