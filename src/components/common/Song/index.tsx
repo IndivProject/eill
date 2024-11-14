@@ -24,19 +24,18 @@ const Song = ({
   const [isHover, setIsHover] = useState<boolean>(false);
   const navigate = useNavigate();
 
-  const MoveDetailPage = () => navigate(`/detail/${isAlbum ? 1 : 0}/${idx}`);
+  const MoveDetailPage = () =>
+    navigate(`/${isAlbum ? "album" : "single"}/${idx}`);
 
   return (
     <S.MainWrap
       onMouseOver={() => setIsHover(true)}
       onMouseOut={() => setIsHover(false)}
     >
-      <S.ImageWrap>
+      <S.ImageWrap onClick={MoveDetailPage}>
         {
           <S.ImageFilter isHover={isHover}>
-            <S.DetailContext onClick={MoveDetailPage}>
-              자세히 보기
-            </S.DetailContext>
+            <S.DetailContext>자세히 보기</S.DetailContext>
           </S.ImageFilter>
         }
         <S.Image src={image} alt="image" />

@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Main from "./pages/Main";
-import Detail from "./pages/Detail";
+import SingleDetail from "./pages/SingleDetail";
 import "./style/index.css";
 import { ThemeProvider } from "styled-components";
 import { themeColor } from "./style/ThemeColor";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AlbumDetail from "./pages/AlbumDetail/Album";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,7 +16,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/detail/:type/:idx" element={<Detail />} />
+        <Route path="/single/:idx" element={<SingleDetail />} />
+        <Route path="/album/:idx" element={<AlbumDetail />} />
       </Routes>
     </BrowserRouter>
   </ThemeProvider>
