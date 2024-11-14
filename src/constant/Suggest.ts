@@ -7,6 +7,8 @@ export interface ISuggestSong {
   url: string;
   introduce: string;
   image: string;
+  index: number;
+  detailIndex: number;
 }
 
 export const SuggestSong: ISuggestSong[] = [
@@ -17,6 +19,8 @@ export const SuggestSong: ISuggestSong[] = [
     url: Album[0].url,
     introduce: "힘이 나는 곡",
     image: Album[0].image,
+    index: 0,
+    detailIndex: 0,
   },
   {
     title: Album[0].songs[1],
@@ -25,6 +29,8 @@ export const SuggestSong: ISuggestSong[] = [
     url: Album[0].url,
     introduce: "뭔가를 원할 때 듣는 곡",
     image: Album[0].image,
+    index: 0,
+    detailIndex: 1,
   },
   {
     title: Album[0].songs[3],
@@ -33,6 +39,8 @@ export const SuggestSong: ISuggestSong[] = [
     url: Album[0].url,
     introduce: "마음의 치유를 받을 때 듣는 곡",
     image: Album[0].image,
+    index: 0,
+    detailIndex: 3,
   },
   {
     title: Album[1].songs[1],
@@ -41,6 +49,8 @@ export const SuggestSong: ISuggestSong[] = [
     url: Album[1].url,
     introduce: "신날때, 텐션을 올리고 싶을 때",
     image: Album[1].image,
+    index: 1,
+    detailIndex: 1,
   },
   {
     title: Album[1].songs[3],
@@ -49,6 +59,8 @@ export const SuggestSong: ISuggestSong[] = [
     url: Album[1].url,
     introduce: "행복해지는 노래",
     image: Album[1].image,
+    index: 1,
+    detailIndex: 3,
   },
 
   {
@@ -58,6 +70,8 @@ export const SuggestSong: ISuggestSong[] = [
     url: Album[2].url,
     introduce: "신나는 노래 원탑",
     image: Album[2].image,
+    index: 0,
+    detailIndex: 0,
   },
   {
     title: Album[2].songs[3],
@@ -66,6 +80,8 @@ export const SuggestSong: ISuggestSong[] = [
     url: Album[2].url,
     introduce: "정신차릴때 듣는 노래",
     image: Album[2].image,
+    index: 2,
+    detailIndex: 0,
   },
   {
     title: Album[3].songs[0],
@@ -74,6 +90,8 @@ export const SuggestSong: ISuggestSong[] = [
     url: Album[3].url,
     introduce: "제일 좋은 노래",
     image: Album[3].image,
+    index: 3,
+    detailIndex: 0,
   },
   {
     title: Album[3].songs[7],
@@ -82,6 +100,8 @@ export const SuggestSong: ISuggestSong[] = [
     url: Album[3].url,
     introduce: "여행갈 때, 차분해지는 노래",
     image: Album[3].image,
+    index: 3,
+    detailIndex: 7,
   },
   {
     title: Album[4].songs[0],
@@ -90,5 +110,7 @@ export const SuggestSong: ISuggestSong[] = [
     url: Album[4].url,
     introduce: "춤 추고 싶을때",
     image: Album[4].image,
+    index: 4,
+    detailIndex: 0,
   },
 ];
