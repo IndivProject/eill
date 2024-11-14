@@ -23,8 +23,6 @@ export const Image = styled.img`
   background-color: ${({ theme }) => theme.personal};
   width: 12rem;
   height: 12rem;
-
-  margin-right: 2rem;
 `;
 
 export const SongTitle = styled.p`
@@ -52,4 +50,36 @@ export const Context = styled.p`
 
 export const SongInfoWrap = styled.div`
   display: flex;
+`;
+
+export const ImageWrap = styled.div`
+  border-radius: 0.5rem;
+  width: 12rem;
+  height: 12rem;
+  overflow: hidden;
+  position: relative;
+
+  cursor: pointer;
+  margin-right: 2rem;
+`;
+
+export const ImageFilter = styled.div<{ isHover: boolean }>`
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+
+  transition: 0.5s;
+  margin-top: ${({ isHover }) => (isHover ? "0rem" : "12rem")};
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const DetailContext = styled.p`
+  font-size: 1rem;
+  font-family: "Bold";
+
+  color: ${({ theme }) => theme.white10};
 `;

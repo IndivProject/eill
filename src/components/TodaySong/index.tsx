@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./style";
 import { IAlbum } from "./../../constant/type";
 import Button from "../common/Button";
@@ -9,6 +9,7 @@ interface ITodaySong {
 }
 
 const TodaySong = ({ songInfo }: ITodaySong) => {
+  const [isHover, setIsHover] = useState<boolean>(false);
   const OpenYoutube = () => {
     window.open(songInfo.url, "_blank");
   };
@@ -16,9 +17,19 @@ const TodaySong = ({ songInfo }: ITodaySong) => {
   return (
     <S.MainContainer>
       <S.Title>오늘의 노래</S.Title>
-      <S.SongWrap>
+      <S.SongWrap
+        onMouseOver={() => setIsHover(true)}
+        onMouseOut={() => setIsHover(false)}
+      >
         <S.SongInfoWrap>
-          <S.Image src={songInfo.image} />
+          <S.ImageWrap>
+            {
+              <S.ImageFilter isHover={isHover}>
+                <S.DetailContext>자세히 보기</S.DetailContext>
+              </S.ImageFilter>
+            }
+            <S.Image src={songInfo.image} />
+          </S.ImageWrap>
           <div>
             <S.SongTitle onClick={OpenYoutube}>{songInfo.title}</S.SongTitle>
             <S.Context>{songInfo.introduce}</S.Context>
