@@ -11,4 +11,5 @@ export interface ISingle {
   title: string;
   date: string;
   url: string;
+  lyrics?: string;
 }

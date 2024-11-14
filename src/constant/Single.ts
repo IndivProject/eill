@@ -21,99 +21,147 @@ import Kokodeikeoshite from "../asset/Songs/Single/kokodeikeoshite.webp";
 import Suki from "../asset/Songs/Single/suki.webp";
 import Wanna from "../asset/Songs/Single/wanna.webp";
 import Weare from "../asset/Songs/Single/weare.webp";
+import Kakumaizenya from "../asset/Songs/Single/kakumaizenya.webp";
+import Happyeverafter from "../asset/Songs/Single/happyeverafter.webp";
+import Bae from "../asset/Songs/Single/Bae.webp";
+import Song25 from "../asset/Songs/Single/25.webp";
 
 import { ISingle } from "./type";
+import { SingleLyrics } from "./Lyrics";
 
 export const Single: ISingle[] = [
+  {
+    image: Kakumaizenya,
+    title: "革命前夜",
+    date: "2024. 09. 27.",
+    url: "https://www.youtube.com/watch?v=LjkIuPcXX1U",
+    lyrics: SingleLyrics.Kakumaizenya,
+  },
+  {
+    image: Happyeverafter,
+    title: "happy ever after",
+    date: "2024. 8. 21.",
+    url: "https://www.youtube.com/watch?v=QH0YHGMChf0",
+    lyrics: SingleLyrics.HappyEverAfter,
+  },
+  {
+    image: Bae,
+    title: "BAE",
+    date: "2024. 07. 24.",
+    url: "https://www.youtube.com/watch?v=r89Y17Ar4a4",
+    lyrics: SingleLyrics.Bae,
+  },
+  {
+    image: Song25,
+    title: "25",
+    date: "2024. 02. 28.",
+    url: "https://youtube.com/watch?v=OSGWOWdWdt4",
+    lyrics: SingleLyrics.Song25,
+  },
   {
     image: Cheatlife,
     title: "CHEAT LIFE",
     date: "2023. 11. 22.",
     url: "https://www.youtube.com/watch?v=r89Y17Ar4a4",
+    lyrics: SingleLyrics.CheatLife,
   },
   {
     image: Wanna,
     title: "罠",
     date: "2023. 08. 23.",
     url: "https://www.youtube.com/watch?v=X7nxWvN8ua0",
+    lyrics: SingleLyrics.Wanna,
   },
   {
     image: Happyending,
     title: "happy ending",
     date: "2023. 06. 14.",
     url: "https://www.youtube.com/watch?v=Vsjl5gUCQmw",
+    lyrics: SingleLyrics.happyending,
   },
   {
     image: Weare,
     title: "WE ARE",
     date: "2023. 03. 15.",
     url: "https://www.youtube.com/watch?v=hBwuTm4PlM8",
+    lyrics: SingleLyrics.WEARE,
   },
   {
     image: Suki,
     title: "スキ",
     date: "2022. 07. 27.",
     url: "https://www.youtube.com/watch?v=S99N4OzL0O0",
+    lyrics: SingleLyrics.Suki,
   },
   {
     image: HBBtome,
     title: "HAPPY BIRTHDAY 2 ME",
     date: "2022. 06. 17.",
     url: "https://www.youtube.com/watch?v=Zc3fv3YWP9U",
+    lyrics: SingleLyrics.HBBtome,
   },
   {
     image: Song23,
     title: "23",
     date: "2021. 11. 10.",
     url: "https://www.youtube.com/watch?v=f6Q8PbD_3u8",
+    lyrics: SingleLyrics.Song23,
   },
   {
     image: Plasticlove,
     title: "プラスティック・ラブ",
     date: "2021. 09. 08.",
     url: "https://www.youtube.com/watch?v=ZsLjpUkHXnI",
+    lyrics: SingleLyrics.PlasticLove,
   },
   {
     image: Hananoyoni,
     title: "花のように",
     date: "2021. 08. 11.",
     url: "https://www.youtube.com/watch?v=KQoeOuNDhIw",
+    lyrics: SingleLyrics.Hananoyouni,
   },
   {
     image: Hikari,
     title: "hikari",
     date: "2021. 06. 21.",
     url: "https://www.youtube.com/watch?v=46yOIwzuUj0",
+    lyrics: SingleLyrics.hikari,
   },
   {
     image: Kokodeikeoshite,
     title: "ここで息をして",
     date: "2021. 04. 09.",
     url: "https://www.youtube.com/watch?v=WkQE64jInOw",
+    lyrics: SingleLyrics.Kokodeikiwoshite,
   },
   {
     image: NightD,
     title: "Night D",
     date: "2020. 08. 05.",
     url: "https://www.youtube.com/watch?v=iLUy-f1-6cE",
+    lyrics: SingleLyrics.NightD,
   },
   {
     image: Odorosenaide,
     title: "踊らせないで",
     date: "2020. 07. 01.",
     url: "https://www.youtube.com/watch?v=-m1IBXDZIQs",
+    lyrics: SingleLyrics.Odorosenaide,
   },
   {
     image: FakeLove,
     title: "FAKE LOVE/",
     date: "2020. 05. 20.",
     url: "https://www.youtube.com/watch?v=nwgGZXy0wII",
+    lyrics: SingleLyrics.FakeLove,
   },
   {
     image: OneLastTime,
     title: "ONE LAST TIME (Prod.AmPm)",
     date: "2019. 09. 25.",
     url: "https://www.youtube.com/watch?v=QfJxoKzpGXc",
+    lyrics: SingleLyrics.OneLastTime,
   },
   {
     image: SuccubusRemix,
@@ -126,12 +174,14 @@ export const Single: ISingle[] = [
     title: "Succubus",
     date: "2019. 06. 26.",
     url: "https://www.youtube.com/watch?v=7_jqyNHeNdM",
+    lyrics: SingleLyrics.Succubus,
   },
   {
     image: Song20,
     title: "20",
     date: "2019. 05. 22.",
     url: "https://www.youtube.com/watch?v=sZDMvAPYQuk",
+    lyrics: SingleLyrics.Song20,
   },
   {
     image: FuturewaveRemix,
@@ -156,11 +206,13 @@ export const Single: ISingle[] = [
     title: "HUSH",
     date: "2018. 07. 18.",
     url: "https://www.youtube.com/watch?v=5NIBFjeZNy8&list=OLAK5uy_kYnXu0rb5969rKp3VY1chN3OnKZSaWh3Y",
+    lyrics: SingleLyrics.HUSH,
   },
   {
     image: Makuake,
     title: "MAKUAKE",
     date: "2018. 06. 13.",
     url: "https://www.youtube.com/watch?v=T15hWuRrYG8",
+    lyrics: SingleLyrics.MAKUAKE,
   },
 ];
