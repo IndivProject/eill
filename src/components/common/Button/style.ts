@@ -9,21 +9,21 @@ export const Button = styled.button`
   justify-content: space-between;
   align-items: center;
 
-  background-color: ${({ theme }) => theme.personal30};
+  background-color: ${({ theme }) => theme.white30};
 
-  padding: 2rem 1rem;
+  padding: 1.75rem 1rem;
   border-radius: 0.75rem;
 
   height: 2rem;
 
   &:hover {
-    background-color: ${({ theme }) => theme.personal10};
+    background-color: ${({ theme }) => theme.white40};
   }
 `;
 
 export const Context = styled.p`
   color: ${({ theme }) => theme.white10};
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-right: 1rem;
 `;
 
