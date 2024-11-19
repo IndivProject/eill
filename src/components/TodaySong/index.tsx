@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import * as S from "./style";
-import { IAlbum } from "./../../constant/type";
 import Button from "../common/Button";
 import { ISuggestSong } from "../../constant/Suggest";
+import { useNavigate } from "react-router-dom";
 
 interface ITodaySong {
   songInfo: ISuggestSong;
 }
 
 const TodaySong = ({ songInfo }: ITodaySong) => {
+  const navigate = useNavigate();
   const [isHover, setIsHover] = useState<boolean>(false);
   const OpenYoutube = () => {
-    window.open(songInfo.url, "_blank");
+    window.open(`https://www.youtube.com/watch?v=${songInfo.url}`, "_blank");
   };
 
   return (
@@ -22,7 +23,11 @@ const TodaySong = ({ songInfo }: ITodaySong) => {
         onMouseOut={() => setIsHover(false)}
       >
         <S.SongInfoWrap>
-          <S.ImageWrap>
+          <S.ImageWrap
+            onClick={() =>
+              navigate(`/album/${songInfo.index}/${songInfo.detailIndex}`)
+            }
+          >
             {
               <S.ImageFilter isHover={isHover}>
                 <S.DetailContext>자세히 보기</S.DetailContext>
