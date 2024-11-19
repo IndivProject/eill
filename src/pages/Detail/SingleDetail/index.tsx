@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Single } from "../../constant/Single";
-import { ISingle } from "../../constant/type";
-import Button from "../../components/common/Button";
+import { Single } from "../../../constant/Single";
+import { ISingle } from "../../../constant/type";
+import Button from "../../../components/common/Button";
 import YouTube from "react-youtube";
-import * as S from "./style";
+import * as S from "../style";
 
 const SingleDetail = () => {
   const navigate = useNavigate();
