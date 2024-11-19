@@ -30,8 +30,8 @@ const AlbumList = () => {
                         title={Album[idx1 + count * idx].title}
                         date={Album[idx1 + count * idx].date}
                         idx={idx1 + count * idx}
-                        inviteSong={Album[idx1 + count * idx].songs[0]}
-                        inviteSong2={Album[idx1 + count * idx].songs[1]}
+                        inviteSong={Album[idx1 + count * idx].songs[0].name}
+                        inviteSong2={Album[idx1 + count * idx].songs[1].name}
                         isAlbum
                       />
                     );
