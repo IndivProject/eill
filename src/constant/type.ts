@@ -1,9 +1,14 @@
+interface IAlbumSongInfo {
+  name: string;
+  url: string;
+}
+
 export interface IAlbum {
   image: string;
   url: string;
   title: string;
   date: string;
-  songs: string[];
+  songs: IAlbumSongInfo[];
 }
 
 export interface ISingle {
