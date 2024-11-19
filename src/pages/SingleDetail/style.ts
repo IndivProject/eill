@@ -70,6 +70,10 @@ export const AlbumButtonWrap = styled.div`
   align-items: right;
 `;
 
+export const TitleWrap = styled.div`
+  max-width: 400px;
+`;
+
 export const Title = styled.p`
   font-size: 3rem;
   font-family: "Bold";
@@ -107,5 +111,7 @@ export const Line = styled.div`
 
 export const MainWrap = styled.div`
   background-color: ${({ theme }) => theme.white10};
+  min-height: 100vh;
+  box-sizing: border-box;
   padding: 10rem 0;
 `;

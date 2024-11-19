@@ -30,7 +30,7 @@ const SingleDetail = () => {
           </S.AlbumWrap>
           <Button context="돌아가기" onClick={() => navigate("/")} />
         </S.AlbumButtonWrap>
-        <div>
+        <S.TitleWrap>
           <S.Title>{SingleInfo.title}</S.Title>
           <S.Line />
           <S.Lyrics>{SingleInfo.date}</S.Lyrics>
@@ -45,7 +45,7 @@ const SingleDetail = () => {
               <S.Lyrics>가사 정보 없음</S.Lyrics>
             )}
           </p>
-        </div>
+        </S.TitleWrap>
         <S.YoutubeBoxWrap>
           <S.YoutubeBox>
             <YouTube
