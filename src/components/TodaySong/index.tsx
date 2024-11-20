@@ -19,7 +19,7 @@ const TodaySong = ({ songInfo }: ITodaySong) => {
 
   return (
     <S.MainContainer>
-      <S.Title>오늘의 노래</S.Title>
+      <S.Title isMoblie={checkWidth()}>오늘의 노래</S.Title>
       <S.SongWrap
         onMouseOver={() => setIsHover(true)}
         onMouseOut={() => setIsHover(false)}

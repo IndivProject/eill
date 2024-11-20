@@ -5,8 +5,8 @@ export const MainContainer = styled.div`
   width: 60%;
 `;
 
-export const Title = styled.p`
-  font-size: 2rem;
+export const Title = styled.p<{ isMoblie: boolean }>`
+  font-size: ${({ isMoblie }) => (isMoblie ? "1.5rem" : "2rem")};
   font-family: "Bold";
 `;
 
