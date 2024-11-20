@@ -36,7 +36,13 @@ const TodaySong = ({ songInfo }: ITodaySong) => {
             <S.Image src={songInfo.image} />
           </S.ImageWrap>
           <div>
-            <S.SongTitle onClick={OpenYoutube}>{songInfo.title}</S.SongTitle>
+            <S.SongTitle
+              onClick={() =>
+                navigate(`/album/${songInfo.index}/${songInfo.detailIndex}`)
+              }
+            >
+              {songInfo.title}
+            </S.SongTitle>
             <S.Context>{songInfo.introduce}</S.Context>
             <S.Context>앨범명 : {songInfo.album}</S.Context>
             <S.Context>발매일 : {songInfo.date}</S.Context>
