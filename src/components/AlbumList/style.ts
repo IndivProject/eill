@@ -18,7 +18,7 @@ export const Line = styled.div`
 export const SongWrap = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 10rem;
 `;
 
