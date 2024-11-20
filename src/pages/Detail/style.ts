@@ -71,7 +71,7 @@ export const AlbumButtonWrap = styled.div`
 `;
 
 export const TitleWrap = styled.div`
-  max-width: 400px;
+  width: 400px;
 `;
 
 export const Title = styled.p`
@@ -114,4 +114,32 @@ export const MainWrap = styled.div`
   min-height: 100vh;
   box-sizing: border-box;
   padding: 10rem 0;
+`;
+
+export const AlbumSongName = styled.div`
+  font-size: 1rem;
+  font-family: "Bold";
+`;
+
+export const AlbumSongWrap = styled.div<{ isActive: boolean }>`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0rem;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor : pointer;
+  background-color :${({ isActive, theme }) => isActive && theme.white20};
+
+  &:hover{
+    background-color :${({ theme }) => theme.white20};
+  `;
+
+export const AlbumActiveState = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: ${({ theme }) => theme.personal};
 `;
