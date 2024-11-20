@@ -21,4 +21,5 @@ export const Context = styled.p`
 export const Logo = styled.img`
   height: 4rem;
   margin-right: 4rem;
+  cursor: pointer;
 `;

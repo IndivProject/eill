@@ -5,7 +5,11 @@ import EillImg from "../../../asset/Eill.webp";
 const Footer = () => {
   return (
     <S.Footer>
-      <S.Logo src={EillImg} alt="logo" />
+      <S.Logo
+        src={EillImg}
+        alt="logo"
+        onClick={() => window.open(`https://www.youtube.com/@_eill_`, "_blank")}
+      />
       <div>
         <S.Context>Copyright ⓒ 2024. eill All rights reserved.</S.Context>
         <S.Context>가사 출처 : Google, genius.com</S.Context>
