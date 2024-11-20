@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1a8dccc0.css",
-    "main.js": "/static/js/main.17a42d18.js",
+    "main.js": "/static/js/main.a76115ce.js",
     "static/media/MainImg.png": "/static/media/MainImg.99630c4d71a21534b55f.png",
     "static/media/kakumaizenya.webp": "/static/media/kakumaizenya.779e88725b70a05c8c4c.webp",
     "static/media/happyeverafter.webp": "/static/media/happyeverafter.2e184393995e8e515f07.webp",
@@ -36,15 +36,16 @@
     "static/media/Odorosenaide.webp": "/static/media/Odorosenaide.aded065d5bdac021ca28.webp",
     "static/media/hananoyoni.webp": "/static/media/hananoyoni.bcf6ce90b6f9a8bc56ef.webp",
     "static/media/happyending.webp": "/static/media/happyending.188502b6c36518b3b3be.webp",
+    "static/media/Github.png": "/static/media/Github.1d41c322e18c3540167d.png",
     "static/media/cheatlife.webp": "/static/media/cheatlife.30d12bcb5874b43c35e3.webp",
     "static/media/Eill.webp": "/static/media/Eill.18ad3980830e9dc2f3a5.webp",
     "static/media/wanna.webp": "/static/media/wanna.20bd0cbaf1e3e9fd46cc.webp",
     "index.html": "/index.html",
     "main.1a8dccc0.css.map": "/static/css/main.1a8dccc0.css.map",
-    "main.17a42d18.js.map": "/static/js/main.17a42d18.js.map"
+    "main.a76115ce.js.map": "/static/js/main.a76115ce.js.map"
   },
   "entrypoints": [
     "static/css/main.1a8dccc0.css",
-    "static/js/main.17a42d18.js"
+    "static/js/main.a76115ce.js"
   ]
 }
