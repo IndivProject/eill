@@ -1,6 +1,7 @@
 import React from "react";
 import DirectionImg from "../../../asset/Direction.png";
 import * as S from "./style";
+import useGetBrWidth from "../../../hooks/useGetBrWidth";
 
 interface IButtonProps {
   context: string;
@@ -8,11 +9,12 @@ interface IButtonProps {
 }
 
 const Button = ({ context, onClick, ...props }: IButtonProps) => {
+  const { checkWidth } = useGetBrWidth();
   return (
     <>
-      <S.Button onClick={onClick} {...props}>
-        <S.Context>{context}</S.Context>
-        <S.Direction src={DirectionImg} alt="" />
+      <S.Button onClick={onClick} {...props} isMoblie={checkWidth()}>
+        <S.Context isMoblie={checkWidth()}>{context}</S.Context>
+        <S.Direction src={DirectionImg} alt="" isMoblie={checkWidth()} />
       </S.Button>
     </>
   );

@@ -15,10 +15,12 @@ export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: blue;
 `;
 
-export const Img = styled.img`
-  width: 120%;
+export const Img = styled.img<{ isMoblie: boolean }>`
+  ${({ isMoblie }) => (isMoblie ? `height: 100%;` : `width: 120%;`)}
 `;
 
 export const ImgBlur = styled.div`
@@ -41,11 +43,12 @@ export const Title = styled.p`
   color: ${({ theme }) => theme.white10};
 `;
 
-export const Introduce = styled.p`
+export const Introduce = styled.p<{ isMoblie: boolean }>`
   font-size: 1rem;
   letter-spacing: 0.75rem;
   color: ${({ theme }) => theme.white10};
   margin-bottom: 1rem;
+  ${({ isMoblie }) => isMoblie && `text-align: center;`}
 `;
 
 export const Line = styled.div`

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./style";
 import { useNavigate } from "react-router-dom";
+import useGetBrWidth from "../../../hooks/useGetBrWidth";
 
 interface IAlbum {
   image: string;
@@ -21,6 +22,7 @@ const Song = ({
   inviteSong2,
   isAlbum,
 }: IAlbum) => {
+  const { checkWidth } = useGetBrWidth();
   const [isHover, setIsHover] = useState<boolean>(false);
   const navigate = useNavigate();
 
@@ -29,31 +31,38 @@ const Song = ({
 
   return (
     <S.MainWrap
+      isMoblie={checkWidth()}
       onMouseOver={() => setIsHover(true)}
       onMouseOut={() => setIsHover(false)}
     >
-      <S.ImageWrap onClick={MoveDetailPage}>
-        {
+      <S.ImageWrap onClick={MoveDetailPage} isMoblie={checkWidth()}>
+        {!checkWidth() && (
           <S.ImageFilter isHover={isHover}>
             <S.DetailContext>자세히 보기</S.DetailContext>
           </S.ImageFilter>
-        }
+        )}
         <S.Image src={image} alt="image" />
       </S.ImageWrap>
-      <S.ContextWrap>
-        <S.Context isHover={isHover} onClick={MoveDetailPage}>
+      <S.ContextWrap isMoblie={checkWidth()}>
+        <S.Context
+          isMoblie={checkWidth()}
+          isHover={isHover}
+          onClick={MoveDetailPage}
+        >
           {title}
         </S.Context>
-        <S.Context>{date}</S.Context>
-        <S.Context>
-          {inviteSong}
-          {isAlbum && (
-            <>
-              ,<br />
-              {inviteSong2} ...
-            </>
-          )}
-        </S.Context>
+        <S.Context isMoblie={checkWidth()}>{date}</S.Context>
+        {!checkWidth() && (
+          <S.Context isMoblie={checkWidth()}>
+            {inviteSong}
+            {isAlbum && (
+              <>
+                ,<br />
+                {inviteSong2} ...
+              </>
+            )}
+          </S.Context>
+        )}
       </S.ContextWrap>
     </S.MainWrap>
   );

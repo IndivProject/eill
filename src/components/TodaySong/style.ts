@@ -21,41 +21,14 @@ export const SongWrap = styled.div`
 export const Image = styled.img`
   border-radius: 0.5rem;
   background-color: ${({ theme }) => theme.personal};
-  width: 12rem;
-  height: 12rem;
+  width: 100%;
+  height: 100%;
 `;
 
-export const SongTitle = styled.p`
-  font-size: 2.5rem;
-  font-family: "Bold";
-  margin-bottom: 0.5rem;
-
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-export const Context = styled.p`
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
-  ${({ theme }) => theme.personal10};
-
-  &:nth-child(2) {
-    font-family: "Medium";
-    font-size: 1.25rem;
-  }
-`;
-
-export const SongInfoWrap = styled.div`
-  display: flex;
-`;
-
-export const ImageWrap = styled.div`
+export const ImageWrap = styled.div<{ isMoblie: boolean }>`
   border-radius: 0.5rem;
-  width: 12rem;
-  height: 12rem;
+  width: ${({ isMoblie }) => (isMoblie ? "4rem" : "12rem")};
+  height: ${({ isMoblie }) => (isMoblie ? "4rem" : "12rem")};
   overflow: hidden;
   position: relative;
 
@@ -66,8 +39,8 @@ export const ImageWrap = styled.div`
 export const ImageFilter = styled.div<{ isHover: boolean }>`
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
-  width: 12rem;
-  height: 12rem;
+  width: 100%;
+  height: 100%;
 
   transition: 0.5s;
   margin-top: ${({ isHover }) => (isHover ? "0rem" : "12rem")};
@@ -75,6 +48,33 @@ export const ImageFilter = styled.div<{ isHover: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const SongTitle = styled.p<{ isMoblie: boolean }>`
+  font-size: ${({ isMoblie }) => (isMoblie ? "1.5rem" : "2.5rem")};
+  font-family: "Bold";
+  margin-bottom: 0.5rem;
+
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const Context = styled.p<{ isMoblie: boolean }>`
+  font-size: ${({ isMoblie }) => (isMoblie ? "0.5rem" : "1rem")};
+  margin-bottom: 0.25rem;
+  ${({ theme }) => theme.personal10};
+
+  &:nth-child(2) {
+    font-family: "Medium";
+    font-size: ${({ isMoblie }) => (isMoblie ? "0.75rem" : "1.25rem")};
+  }
+`;
+
+export const SongInfoWrap = styled.div`
+  display: flex;
 `;
 
 export const DetailContext = styled.p`

@@ -7,8 +7,10 @@ import { SuggestSong } from "../../constant/Suggest";
 import { TodaySuggest } from "../../util/todaySuggest";
 import AlbumList from "../../components/AlbumList";
 import Footer from "../../components/common/Footer";
+import useGetBrWidth from "../../hooks/useGetBrWidth";
 
 const Main = () => {
+  const { checkWidth } = useGetBrWidth();
   return (
     <>
       <S.MainContainer>
@@ -16,14 +18,15 @@ const Main = () => {
           <S.ImgBlur>
             <S.Title>eill</S.Title>
             <S.Line />
-            <S.Introduce>Tokyo | singer-songwriter</S.Introduce>
-            <S.Introduce>1998. 06. 17.</S.Introduce>
+            <S.Introduce isMoblie={checkWidth()}>
+              Tokyo {checkWidth() ? <br /> : "|"} singer-songwriter
+            </S.Introduce>
+            <S.Introduce isMoblie={checkWidth()}>1998. 06. 17.</S.Introduce>
           </S.ImgBlur>
-          <S.Img src={MainImg} alt="mainimg" />
+          <S.Img src={MainImg} alt="mainimg" isMoblie={checkWidth()} />
         </div>
         <S.Direction src={DirectionImg} alt="direction" />
       </S.MainContainer>
-
       <TodaySong songInfo={SuggestSong[TodaySuggest()]} />
 
       <AlbumList />

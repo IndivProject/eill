@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const Title = styled.p`
-  font-size: 2rem;
+export const Title = styled.p<{ isMoblie: boolean }>`
+  font-size: ${({ isMoblie }) => (isMoblie ? "1.5rem" : "2rem")};
   font-family: "Bold";
 
-  margin-bottom: 2rem;
+  margin-bottom: ${({ isMoblie }) => (isMoblie ? "1.5rem" : "2rem")};
 `;
 
 export const Line = styled.div`
@@ -15,15 +15,15 @@ export const Line = styled.div`
   margin-bottom: 3rem;
 `;
 
-export const SongWrap = styled.div`
+export const SongWrap = styled.div<{ isMoblie: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 10rem;
+  margin-bottom: ${({ isMoblie }) => (isMoblie ? "4rem" : "10rem")};
 `;
 
-export const SongContainer = styled.div`
-  margin: 20rem auto;
+export const SongContainer = styled.div<{ isMoblie: boolean }>`
+  margin: ${({ isMoblie }) => (isMoblie ? "5rem" : "20rem")} auto;
 
-  width: 80%;
+  width: ${({ isMoblie }) => (isMoblie ? "60%" : "80%")};
 `;
