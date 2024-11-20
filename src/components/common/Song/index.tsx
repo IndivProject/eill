@@ -25,7 +25,7 @@ const Song = ({
   const navigate = useNavigate();
 
   const MoveDetailPage = () =>
-    navigate(`/${isAlbum ? "album" : "single"}/${idx}${isAlbum && "/0"}`);
+    navigate(`/${isAlbum ? "album" : "single"}/${idx}`);
 
   return (
     <S.MainWrap
