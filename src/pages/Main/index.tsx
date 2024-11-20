@@ -23,7 +23,7 @@ const Main = () => {
             </S.Introduce>
             <S.Introduce isMoblie={checkWidth()}>1998. 06. 17.</S.Introduce>
           </S.ImgBlur>
-          <S.Img src={MainImg} alt="mainimg" isMoblie={checkWidth()} />
+          <S.Img src={MainImg} alt="mainimg" />
         </div>
         <S.Direction src={DirectionImg} alt="direction" />
       </S.MainContainer>

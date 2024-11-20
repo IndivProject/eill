@@ -15,12 +15,10 @@ export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background-color: blue;
 `;
 
-export const Img = styled.img<{ isMoblie: boolean }>`
-  ${({ isMoblie }) => (isMoblie ? `height: 100%;` : `width: 120%;`)}
+export const Img = styled.img`
+  height: 100%;
 `;
 
 export const ImgBlur = styled.div`
