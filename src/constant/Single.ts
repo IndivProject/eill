@@ -168,6 +168,7 @@ export const Single: ISingle[] = [
     title: "Succubus feat.Kvi Baba (grooveman Spot Remix)",
     date: "2019. 07. 24.",
     url: "2bwUkxs-qus",
+    lyrics: SingleLyrics.SuccubusRemix,
   },
   {
     image: Succubus,
@@ -200,6 +201,7 @@ export const Single: ISingle[] = [
     title: "HUSH - MONJOE Remix - feat.Kick a Show",
     date: "2018. 08. 22.",
     url: "zGNRqzAzwW4&list=OLAK5uy_koskBeHqJkq_GvsU7F4HVGA7rGPBP74nE",
+    lyrics: SingleLyrics.HUSHRemix,
   },
   {
     image: Hush,

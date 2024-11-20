@@ -1,6 +1,7 @@
 interface IAlbumSongInfo {
   name: string;
   url: string;
+  lyrics: string;
 }
 
 export interface IAlbum {
