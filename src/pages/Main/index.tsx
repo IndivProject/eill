@@ -6,6 +6,7 @@ import TodaySong from "../../components/TodaySong";
 import { SuggestSong } from "../../constant/Suggest";
 import { TodaySuggest } from "../../util/todaySuggest";
 import AlbumList from "../../components/AlbumList";
+import Footer from "../../components/common/Footer";
 
 const Main = () => {
   return (
@@ -26,6 +27,8 @@ const Main = () => {
       <TodaySong songInfo={SuggestSong[TodaySuggest()]} />
 
       <AlbumList />
+
+      <Footer />
     </>
   );
 };
