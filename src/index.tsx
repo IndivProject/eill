@@ -17,6 +17,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/single/:idx" element={<SingleDetail />} />
+        <Route path="/album/:idx" element={<AlbumDetail />} />
         <Route path="/album/:idx/:detail" element={<AlbumDetail />} />
       </Routes>
     </BrowserRouter>
