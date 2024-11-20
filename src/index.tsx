@@ -6,7 +6,7 @@ import "./style/index.css";
 import { ThemeProvider } from "styled-components";
 import { themeColor } from "./style/ThemeColor";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AlbumDetail from "./pages/Detail/AlbumDetail/Album";
+import AlbumDetail from "./pages/Detail/AlbumDetail";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

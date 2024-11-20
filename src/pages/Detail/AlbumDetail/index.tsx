@@ -1,49 +1,51 @@
 import React, { useEffect, useState } from "react";
+import { IAlbum } from "../../../constant/type";
+import { Album } from "../../../constant/Album";
 import { useNavigate, useParams } from "react-router-dom";
-import { Single } from "../../../constant/Single";
-import { ISingle } from "../../../constant/type";
 import Button from "../../../components/common/Button";
 import YouTube from "react-youtube";
 import * as S from "../style";
 import useGetBrWidth from "../../../hooks/useGetBrWidth";
 
-const SingleDetail = () => {
+const AlbumDetail = () => {
   const { checkWidth } = useGetBrWidth();
   const navigate = useNavigate();
   const params = useParams();
-  const SingleInfo: ISingle = Single[Number(params.idx)];
+  const AlbumInfo: IAlbum = Album[Number(params.idx)];
 
   const [isPlay, setIsPlay] = useState<boolean>(false);
   const setPlayState = (val: boolean) => setIsPlay(val);
 
+  const [index, setIndex] = useState<number>(0);
+
   useEffect(() => {
+    if (params.detail) setIndex(Number(params.detail));
     window.scrollTo(0, 0);
   }, []);
-
   return (
     <S.MainWrap isMoblie={checkWidth()}>
       <S.SongWrap>
         <S.AlbumButtonWrap>
           <S.AlbumWrap isMoblie={checkWidth()}>
             <S.AlbumCover
-              src={SingleInfo.image}
+              src={AlbumInfo.image}
               alt=""
               isMoblie={checkWidth()}
             />
             <S.AlbumCenter isMoblie={checkWidth()} />
             <S.SongImg
               isPlay={isPlay}
-              src={SingleInfo.image}
+              src={AlbumInfo.image}
               alt="image"
               isMoblie={checkWidth()}
             />
-            <S.AlbumBackground src={SingleInfo.image} isMoblie={checkWidth()} />
+            <S.AlbumBackground src={AlbumInfo.image} isMoblie={checkWidth()} />
           </S.AlbumWrap>
-          <Button context="돌아가기" onClick={() => navigate("/")} />{" "}
+          <Button context="돌아가기" onClick={() => navigate("/")} />
           {checkWidth() && (
             <S.MoblieYoutubeBox>
               <YouTube
-                videoId={SingleInfo.url}
+                videoId={AlbumInfo.songs[index].url}
                 opts={{
                   width: "180",
                   height: "120",
@@ -61,16 +63,36 @@ const SingleDetail = () => {
               />
             </S.MoblieYoutubeBox>
           )}
+          <S.AlbumListWrap isMoblie={checkWidth()}>
+            {AlbumInfo.songs.map((e, idx) => (
+              <S.AlbumSongWrap
+                isMoblie={checkWidth()}
+                isActive={idx == index}
+                onClick={() => {
+                  setIsPlay(false);
+                  setIndex(idx);
+                }}
+              >
+                <S.AlbumSongName isMoblie={checkWidth()}>
+                  {e.name}
+                </S.AlbumSongName>
+                {!checkWidth() && idx == index && <S.AlbumActiveState />}
+              </S.AlbumSongWrap>
+            ))}
+          </S.AlbumListWrap>
         </S.AlbumButtonWrap>
         <S.TitleWrap isMoblie={checkWidth()}>
-          <S.Title isMoblie={checkWidth()}>{SingleInfo.title}</S.Title>
+          <S.Title isMoblie={checkWidth()}>
+            {AlbumInfo.songs[index].name}
+          </S.Title>
+          <S.SubTitle isMoblie={checkWidth()}>{AlbumInfo.title}</S.SubTitle>
           <S.Line />
-          <S.Lyrics isMoblie={checkWidth()}>{SingleInfo.date}</S.Lyrics>
-
+          <S.Lyrics isMoblie={checkWidth()}>{AlbumInfo.date}</S.Lyrics>
           <S.SubTitle isMoblie={checkWidth()}>가사</S.SubTitle>
           <S.LyricsWrap isMoblie={checkWidth()}>
-            {SingleInfo.lyrics ? (
-              SingleInfo.lyrics
+            {AlbumInfo.songs[index].lyrics &&
+            AlbumInfo.songs[index].lyrics != "" ? (
+              AlbumInfo.songs[index].lyrics
                 .split("=")
                 .map((e) => (
                   <S.Lyrics isMoblie={checkWidth()}>
@@ -86,7 +108,7 @@ const SingleDetail = () => {
           <S.YoutubeBoxWrap>
             <S.YoutubeBox>
               <YouTube
-                videoId={SingleInfo.url}
+                videoId={AlbumInfo.songs[index].url}
                 opts={{
                   width: "560",
                   height: "315",
@@ -110,4 +132,4 @@ const SingleDetail = () => {
   );
 };
 
-export default SingleDetail;
+export default AlbumDetail;
