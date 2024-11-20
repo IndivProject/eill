@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./style";
 import EillImg from "../../../asset/Eill.webp";
+import GithubImg from "../../../asset/Github.png";
 import useGetBrWidth from "../../../hooks/useGetBrWidth";
 
 const Footer = () => {
@@ -24,6 +25,17 @@ const Footer = () => {
           사진 출처 : Twitter, namu.wiki
         </S.Context>
       </div>
+      <S.GitHub
+        src={GithubImg}
+        alt=""
+        isMoblie={checkWidth()}
+        onClick={() =>
+          window.open(
+            `https://github.com/IndivProject/eill/tree/main`,
+            "_blank"
+          )
+        }
+      />
     </S.Footer>
   );
 };

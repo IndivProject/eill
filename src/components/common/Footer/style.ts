@@ -26,3 +26,8 @@ export const Logo = styled.img<{ isMoblie: boolean }>`
 
   cursor: pointer;
 `;
+
+export const GitHub = styled.img<{ isMoblie: boolean }>`
+  ${({ isMoblie }) => (isMoblie ? "margin-top:1rem;" : "margin-left: 2rem;")}
+  width: ${({ isMoblie }) => (isMoblie ? "2rem" : "4rem")};
+`;
