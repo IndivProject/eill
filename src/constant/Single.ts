@@ -7,7 +7,7 @@ import FuturewaveRemix from "../asset/Songs/Single/FuturewaveRemix.webp";
 import HBBtome from "../asset/Songs/Single/HBBtome.webp";
 import Hush from "../asset/Songs/Single/Hush.webp";
 import HushRemix from "../asset/Songs/Single/HushRemix.webp";
-import Makuake from "../asset/Songs/Single/Makuake.webp";
+import Makuake from "../asset/Songs/Single/MakuakeSingle.webp";
 import MakuakeRemix from "../asset/Songs/Single/MakuakeRemix.webp";
 import NightD from "../asset/Songs/Single/NightD.webp";
 import Odorosenaide from "../asset/Songs/Single/Odorosenaide.webp";
