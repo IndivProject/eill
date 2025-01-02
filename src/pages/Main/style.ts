@@ -18,7 +18,7 @@ export const MainContainer = styled.div`
 `;
 
 export const Img = styled.img`
-  height: 100%;
+  height: 120%;
 `;
 
 export const ImgBlur = styled.div`
