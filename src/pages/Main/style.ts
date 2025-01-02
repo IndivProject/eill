@@ -18,13 +18,13 @@ export const MainContainer = styled.div`
 `;
 
 export const Img = styled.img`
-  height: 120%;
+  height: 100%;
 `;
 
 export const ImgBlur = styled.div`
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 120%;
   background-color: rgba(2525, 255, 255, 0.4);
   top: 0;
   left: 0;
