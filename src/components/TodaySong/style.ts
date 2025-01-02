@@ -51,7 +51,7 @@ export const ImageFilter = styled.div<{ isHover: boolean }>`
 `;
 
 export const SongTitle = styled.p<{ isMoblie: boolean }>`
-  font-size: ${({ isMoblie }) => (isMoblie ? "1.5rem" : "2.5rem")};
+  font-size: ${({ isMoblie }) => (isMoblie ? "1rem" : "2.5rem")};
   font-family: "Bold";
   margin-bottom: 0.5rem;
 
