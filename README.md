@@ -9,7 +9,7 @@
 
 - React / TypeScripts
 - React-router-dom
-- Style-Components
+- Styled-Components
 - React Youtube
 
 ## 파일 구조
